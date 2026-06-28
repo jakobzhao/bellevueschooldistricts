@@ -2,7 +2,7 @@ const levelConfig = {
   elementary: {
     label: {
       zh: "贝尔维尤小学入学区域",
-      en: "Bellevue elementary attendance areas"
+      en: "Bellevue elementary attendance areas / 贝尔维尤小学入学区域"
     },
     file: "data/bellevue_elementary_attendance_areas.geojson",
     scale: "Bellevue elementary attendance areas",
@@ -15,16 +15,16 @@ const levelConfig = {
         "切换到初中或高中尺度后，异常形状是否仍然出现？"
       ],
       en: [
-        "How does this boundary rank within the selected level?",
-        "Does the low score come from elongation, indentation, or protruding pieces?",
-        "Does the same geometric pattern remain visible at middle or high school scale?"
+        "How does this boundary rank within the selected level? / 这个边界在当前尺度内的紧凑度排名如何？",
+        "Does the low score come from elongation, indentation, or protruding pieces? / 低分来自狭长形状、凹陷边界，还是多个突出部分？",
+        "Does the same geometric pattern remain visible at middle or high school scale? / 切换到初中或高中尺度后，异常形状是否仍然出现？"
       ]
     }
   },
   middle: {
     label: {
       zh: "贝尔维尤初中入学区域",
-      en: "Bellevue middle school attendance areas"
+      en: "Bellevue middle school attendance areas / 贝尔维尤初中入学区域"
     },
     file: "data/bellevue_middle_attendance_areas.geojson",
     scale: "Bellevue middle school attendance areas",
@@ -37,16 +37,16 @@ const levelConfig = {
         "初中边界是否吸收了小学尺度上的不规则形状？"
       ],
       en: [
-        "Which middle school boundaries are the main geometric outliers?",
-        "Does Polsby-Popper tend to fall as attendance areas become larger?",
-        "Do middle school boundaries absorb irregular shapes visible at elementary scale?"
+        "Which middle school boundaries are the main geometric outliers? / 初中尺度下哪些边界是主要几何异常值？",
+        "Does Polsby-Popper tend to fall as attendance areas become larger? / 面积变大后，Polsby-Popper 是否更容易下降？",
+        "Do middle school boundaries absorb irregular shapes visible at elementary scale? / 初中边界是否吸收了小学尺度上的不规则形状？"
       ]
     }
   },
   high: {
     label: {
       zh: "贝尔维尤高中入学区域",
-      en: "Bellevue high school attendance areas"
+      en: "Bellevue high school attendance areas / 贝尔维尤高中入学区域"
     },
     file: "data/bellevue_high_attendance_areas.geojson",
     scale: "Bellevue high school attendance areas",
@@ -59,9 +59,9 @@ const levelConfig = {
         "哪些边界适合作为跨尺度比较的基准？"
       ],
       en: [
-        "Does high school scale change the compactness distribution?",
-        "Is convex hull ratio more stable than Polsby-Popper for larger boundaries?",
-        "Which boundaries work best as cross-scale comparison anchors?"
+        "Does high school scale change the compactness distribution? / 高中尺度是否改变了紧凑度分布？",
+        "Is convex hull ratio more stable than Polsby-Popper for larger boundaries? / 较大边界的凸包比例是否比 Polsby-Popper 更稳定？",
+        "Which boundaries work best as cross-scale comparison anchors? / 哪些边界适合作为跨尺度比较的基准？"
       ]
     }
   }
@@ -90,23 +90,23 @@ const contextNotes = {
   },
   en: {
     "CLYDE HILL":
-      "Clyde Hill has a low Polsby-Popper score and works as a sample for inspecting indentation and protrusion in boundary shape.",
+      "Clyde Hill has a low Polsby-Popper score and works as a sample for inspecting indentation and protrusion in boundary shape. / Clyde Hill 的 Polsby-Popper 偏低，主要可作为边界凹陷和突出部分的形状样本来检查。",
     ENATAI:
-      "Enatai is comparatively compact, making it useful as a regular-shape comparison sample.",
+      "Enatai is comparatively compact, making it useful as a regular-shape comparison sample. / Enatai 的紧凑度相对较高，适合作为较规则边界的对照样本。",
     SPIRITRIDGE:
-      "Spiritridge sits in the middle range and helps test how larger area and internal indentation affect metrics.",
+      "Spiritridge sits in the middle range and helps test how larger area and internal indentation affect metrics. / Spiritridge 的边界呈现中等紧凑度，可用于观察较大面积和内部凹陷如何影响指标。",
     WOODRIDGE:
-      "Woodridge sits between regular and irregular shapes, making it useful for comparing Polsby-Popper with convex hull ratio.",
+      "Woodridge sits between regular and irregular shapes, making it useful for comparing Polsby-Popper with convex hull ratio. / Woodridge 的形状介于规则与不规则之间，适合比较 Polsby-Popper 与凸包比例的差异。",
     BENNETT:
-      "Bennett is one of the strongest elementary-scale geometric outliers and works well as a low-compactness sample.",
+      "Bennett is one of the strongest elementary-scale geometric outliers and works well as a low-compactness sample. / Bennett 是小学尺度中最强的几何异常值之一，适合作为低紧凑度样本。",
     "NEWPORT HEIGHTS":
-      "Newport Heights has low compactness and helps show how elongated edges and protrusions affect the score.",
+      "Newport Heights has low compactness and helps show how elongated edges and protrusions affect the score. / Newport Heights 的紧凑度较低，可用于检查狭长边界和边缘突出部分对分数的影响。",
     "LAKE HILLS":
-      "Lake Hills is a moderate geometric signal and works as a comparison point between low and mid-range scores.",
+      "Lake Hills is a moderate geometric signal and works as a comparison point between low and mid-range scores. / Lake Hills 是中等强度的几何信号，适合作为低分与中位分之间的比较点。",
     ODLE:
-      "Odle is the strongest middle school geometric outlier and helps test metric sensitivity on larger boundaries.",
+      "Odle is the strongest middle school geometric outlier and helps test metric sensitivity on larger boundaries. / Odle 是初中尺度上最强的几何异常值，可用于测试指标在较大边界上的敏感性。",
     SAMMAMISH:
-      "Sammamish is the strongest high school geometric outlier and is useful for cross-scale comparison."
+      "Sammamish is the strongest high school geometric outlier and is useful for cross-scale comparison. / Sammamish 是高中尺度上最强的几何异常值，适合作跨尺度比较。"
   }
 };
 
@@ -166,47 +166,47 @@ const translations = {
     brand: "Bellevue Boundary Tool",
     changesLink: "Changes",
     analysisLink: "Analysis",
-    boundaryLevel: "Boundary Level",
-    compareAreas: "Compare school attendance areas",
+    boundaryLevel: "Boundary Level / 边界尺度",
+    compareAreas: "Compare school attendance areas / 比较学校入学区域",
     elementary: "Elementary",
     middle: "Middle",
     high: "High",
-    legendTitle: "Compactness Legend",
-    lowCompactness: "Lower compactness",
-    middleRange: "Middle range",
-    highCompactness: "Higher compactness",
-    selectedBoundary: "Selected Boundary",
+    legendTitle: "Compactness Legend / 紧凑度图例",
+    lowCompactness: "Lower compactness / 较低紧凑度",
+    middleRange: "Middle range / 中间区间",
+    highCompactness: "Higher compactness / 较高紧凑度",
+    selectedBoundary: "Selected Boundary / 已选边界",
     loading: "Loading...",
     noBoundarySelected: "No boundary selected",
     polsbyPopper: "Polsby-Popper",
-    convexHull: "Convex hull ratio",
-    area: "Area",
+    convexHull: "Convex hull ratio / 凸包比例",
+    area: "Area / 面积",
     areaUnit: "sq km",
-    perimeter: "Perimeter",
+    perimeter: "Perimeter / 周长",
     perimeterUnit: "km",
-    minRect: "Min. rectangle ratio",
-    ppPercentile: "Compactness percentile",
-    hullPercentile: "Convex hull percentile",
+    minRect: "Min. rectangle ratio / 最小矩形比例",
+    ppPercentile: "Compactness percentile / 紧凑度分位",
+    hullPercentile: "Convex hull percentile / 凸包分位",
     selectedFallback:
-      "This boundary needs a second layer of evidence before any fairness claim: travel, capacity, neighborhood, demographic, or public-process context.",
-    priorityQuestions: "Priority Questions",
-    mapLayerTitle: "Map Layers",
+      "This boundary needs a second layer of evidence before any fairness claim: travel, capacity, neighborhood, demographic, or public-process context. / 这条边界需要第二层证据才能提出公平性判断：出行、容量、邻里、人口结构或公共程序语境。",
+    priorityQuestions: "Priority Questions / 优先问题",
+    mapLayerTitle: "Map Layers / 地图图层",
     mapSubtitle:
-      "Grayscale vector basemap with Bellevue attendance boundaries colored by Polsby-Popper compactness.",
-    mapCaptionHint: "Click any boundary to inspect its metrics.",
-    methodTitle: "Method",
+      "Grayscale vector basemap with Bellevue attendance boundaries colored by Polsby-Popper compactness. / 灰度矢量底图叠加贝尔维尤入学边界，颜色表示 Polsby-Popper 紧凑度。",
+    mapCaptionHint: "Click any boundary to inspect its metrics. / 点击任意边界查看指标。",
+    methodTitle: "Method / 方法",
     measureTitle: "Measure",
-    measureText: "Compute compactness, convexity, and elongation for every attendance area.",
+    measureText: "Compute compactness, convexity, and elongation for every attendance area. / 为每个入学区域计算紧凑度、凸性和拉长度。",
     flagTitle: "Flag",
-    flagText: "Identify boundary areas where geometry looks unusual or policy relevance is high.",
+    flagText: "Identify boundary areas where geometry looks unusual or policy relevance is high. / 识别几何形状异常或政策相关性较高的边界区域。",
     interpretTitle: "Interpret",
-    interpretText: "Compare metric results and decide which boundaries need closer inspection.",
-    equityTitle: "Equity Check",
-    equityTravel: "Did travel time increase?",
-    equityAccess: "Did program access change?",
-    equityLanguage: "Were multilingual families affected?",
-    equityHousing: "Do housing and income differences compound the impact?",
-    equityVoice: "Did families have a real chance to participate?",
+    interpretText: "Compare metric results and decide which boundaries need closer inspection. / 比较不同指标的结果，判断哪些边界需要进一步检查。",
+    equityTitle: "Equity Check / 公平检查",
+    equityTravel: "Did travel time increase? / 通勤时间是否增加？",
+    equityAccess: "Did program access change? / 项目可达性是否改变？",
+    equityLanguage: "Were multilingual families affected? / 多语言家庭是否受影响？",
+    equityHousing: "Do housing and income differences compound the impact? / 住房与收入差异是否叠加？",
+    equityVoice: "Did families have a real chance to participate? / 家庭是否有真实参与机会？",
     loadErrorTitle: "Unable to load data",
     loadErrorNote:
       "Start a local web server from the site folder so the browser can fetch GeoJSON and CSV files."
@@ -296,7 +296,7 @@ let activeGeojson = null;
 let mapReady = false;
 let interactionsReady = false;
 let started = false;
-let currentLang = "zh";
+let currentLang = "en";
 
 const map = new maplibregl.Map({
   container: "map",

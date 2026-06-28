@@ -572,6 +572,17 @@ button {
   line-height: 1.72;
 }
 
+.zh-text {
+  margin-top: 8px;
+  color: #52615d;
+  font-size: 0.94em;
+}
+
+.bilingual-block .zh-text {
+  max-width: 880px;
+  margin-top: 12px;
+}
+
 .analysis-hero .eyeline {
   margin-bottom: 14px;
 }
@@ -623,6 +634,13 @@ button {
 .analysis-section p,
 .analysis-footer p {
   margin: 0;
+}
+
+.argument-grid .zh-text,
+.critique-list .zh-text,
+.change-note.zh-text,
+.equity-grid .zh-text {
+  margin-top: 8px;
 }
 
 .analysis-section {
