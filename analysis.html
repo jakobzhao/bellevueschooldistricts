@@ -4,28 +4,32 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Boundary Metrics Analysis and Critique</title>
-    <link rel="stylesheet" href="styles.css?v=bilingual-1" />
+    <link rel="stylesheet" href="styles.css?v=lang-toggle-1" />
   </head>
-  <body class="analysis-page">
+  <body class="analysis-page" data-zh-title="边界指标分析与批判">
     <header class="analysis-header">
       <a class="brand" href="index.html" aria-label="Back to Bellevue Boundary Tool">
         <span class="brand-mark"></span>
-        <span>Bellevue Boundary Tool</span>
+        <span data-en="Bellevue Boundary Tool" data-zh="Bellevue 边界工具">Bellevue Boundary Tool</span>
       </a>
       <div class="change-nav">
-        <a class="nav-link" href="index.html">Map Tool</a>
-        <a class="nav-link" href="changes.html">Boundary Changes</a>
+        <a class="nav-link" href="index.html" data-en="Map Tool" data-zh="地图工具">Map Tool</a>
+        <a class="nav-link" href="changes.html" data-en="Boundary Changes" data-zh="边界变化">Boundary Changes</a>
+        <div class="language-toggle" role="group" aria-label="Language switcher">
+          <button class="language-button" type="button" data-lang="zh">中文</button>
+          <button class="language-button active" type="button" data-lang="en">EN</button>
+        </div>
       </div>
     </header>
 
     <main class="analysis-main">
-      <section class="analysis-hero bilingual-block">
-        <p class="eyeline">Analysis</p>
-        <h1>Question boundaries with math, and question math itself</h1>
-        <p>
+      <section class="analysis-hero">
+        <p class="eyeline" data-en="Analysis" data-zh="分析">Analysis</p>
+        <h1 data-en="Question boundaries with math, and question math itself" data-zh="用数学质疑边界，也质疑数学本身">Question boundaries with math, and question math itself</h1>
+        <p class="lang-en">
           This project does not claim that Bellevue's school boundaries are "gerrymandered." It tests how far mathematical indicators can go in local boundary questions. Compactness, convex hull ratio, and minimum rectangle ratio make boundary shape measurable, but they cannot by themselves explain school closure, reassignment, travel burden, program relocation, housing inequality, or public participation.
         </p>
-        <p class="zh-text">
+        <p class="lang-zh zh-text">
           这个项目不是要证明 Bellevue 学区边界被“操纵”，而是测试数学指标在地方边界问题中能走多远。紧凑度、凸包比例、最小矩形比例可以把边界形状变成可比较的证据，但它们不能单独解释学校关闭、学生重新分配、通勤负担、项目迁移、住房差异或公共参与。
         </p>
       </section>
@@ -33,179 +37,124 @@
       <section class="argument-grid">
         <article>
           <span>1</span>
-          <h2>What math can do</h2>
-          <p>
-            Metrics can quickly flag boundaries with unusual shapes. Bennett, Newport Heights, Clyde Hill, and Spiritridge are useful examples because they move the discussion from "this looks odd" to "which boundaries are geometrically unusual within the same scale?"
-          </p>
-          <p class="zh-text">
-            数学指标可以快速标记形状异常的边界。例如 Bennett、Newport Heights、Clyde Hill 和 Spiritridge 能把讨论从“感觉边界奇怪”转为“哪些边界在同一尺度下显著不规则”。
-          </p>
+          <h2 data-en="What math can do" data-zh="数学能做什么">What math can do</h2>
+          <p class="lang-en">Metrics can quickly flag boundaries with unusual shapes. Bennett, Newport Heights, Clyde Hill, and Spiritridge are useful examples because they move the discussion from "this looks odd" to "which boundaries are geometrically unusual within the same scale?"</p>
+          <p class="lang-zh zh-text">数学指标可以快速标记形状异常的边界。例如 Bennett、Newport Heights、Clyde Hill 和 Spiritridge 能把讨论从“感觉边界奇怪”转为“哪些边界在同一尺度下显著不规则”。</p>
         </article>
         <article>
           <span>2</span>
-          <h2>What math cannot prove</h2>
-          <p>
-            Low compactness does not directly prove unfairness. A boundary may be irregular because of lakes, roads, hills, capacity balancing, school locations, or administrative habit. A visually regular boundary can still create unequal impacts.
-          </p>
-          <p class="zh-text">
-            低紧凑度不能直接证明不公平。边界可能因为湖泊、道路、山坡、容量平衡、校舍位置或行政习惯而不规则；反过来，规则边界也可能造成不均等影响。
-          </p>
+          <h2 data-en="What math cannot prove" data-zh="数学不能证明什么">What math cannot prove</h2>
+          <p class="lang-en">Low compactness does not directly prove unfairness. A boundary may be irregular because of lakes, roads, hills, capacity balancing, school locations, or administrative habit. A visually regular boundary can still create unequal impacts.</p>
+          <p class="lang-zh zh-text">低紧凑度不能直接证明不公平。边界可能因为湖泊、道路、山坡、容量平衡、校舍位置或行政习惯而不规则；反过来，规则边界也可能造成不均等影响。</p>
         </article>
         <article>
           <span>3</span>
-          <h2>Why Bellevue is a useful test</h2>
-          <p>
-            Bellevue has measurable boundary data and a real policy context. The 2023 Wilburton and Eastgate consolidation shifts the question from "is the shape compact?" to "did boundary and school decisions distribute impacts unevenly?"
-          </p>
-          <p class="zh-text">
-            Bellevue 同时有可测量的边界数据和真实政策语境。2023 年 Wilburton 与 Eastgate 的整合，使问题从“形状是否紧凑”转为“边界和学校决策是否把影响不均等地分配给不同家庭”。
-          </p>
+          <h2 data-en="Why Bellevue is a useful test" data-zh="为什么 Bellevue 适合作为案例">Why Bellevue is a useful test</h2>
+          <p class="lang-en">Bellevue has measurable boundary data and a real policy context. The 2023 Wilburton and Eastgate consolidation shifts the question from "is the shape compact?" to "did boundary and school decisions distribute impacts unevenly?"</p>
+          <p class="lang-zh zh-text">Bellevue 同时有可测量的边界数据和真实政策语境。2023 年 Wilburton 与 Eastgate 的整合，使问题从“形状是否紧凑”转为“边界和学校决策是否把影响不均等地分配给不同家庭”。</p>
         </article>
       </section>
 
       <section class="analysis-section">
         <div>
-          <p class="eyeline">Methodological Critique / 方法批判</p>
-          <h2>How to evaluate and question the math</h2>
-          <p class="zh-text">怎样评价并质疑这些数学分析</p>
+          <p class="eyeline" data-en="Methodological Critique" data-zh="方法批判">Methodological Critique</p>
+          <h2 data-en="How to evaluate and question the math" data-zh="怎样评价并质疑这些数学分析">How to evaluate and question the math</h2>
         </div>
         <div class="critique-list">
           <article>
-            <h3>Do not treat the metric as the judge / 不要把指标当作裁判</h3>
-            <p>
-              Polsby-Popper is very sensitive to perimeter. A winding boundary lowers the score, but winding may come from natural geography or neighborhood edges rather than unfair design.
-            </p>
-            <p class="zh-text">
-              Polsby-Popper 对周长非常敏感。边界越曲折，分数越低，但曲折可能来自自然地理或街区边缘，不一定来自不公平设计。
-            </p>
+            <h3 data-en="Do not treat the metric as the judge" data-zh="不要把指标当作裁判">Do not treat the metric as the judge</h3>
+            <p class="lang-en">Polsby-Popper is very sensitive to perimeter. A winding boundary lowers the score, but winding may come from natural geography or neighborhood edges rather than unfair design.</p>
+            <p class="lang-zh zh-text">Polsby-Popper 对周长非常敏感。边界越曲折，分数越低，但曲折可能来自自然地理或街区边缘，不一定来自不公平设计。</p>
           </article>
           <article>
-            <h3>Compare several metrics / 比较多个指标</h3>
-            <p>
-              Convex hull ratio and minimum rectangle ratio supplement Polsby-Popper. If several measures are low, the geometry deserves attention; if only one measure is low, the interpretation should be cautious.
-            </p>
-            <p class="zh-text">
-              凸包比例和最小矩形比例可以补充 Polsby-Popper。如果多个指标都低，几何异常更值得关注；如果只有一个指标低，就需要谨慎解释。
-            </p>
+            <h3 data-en="Compare several metrics" data-zh="比较多个指标">Compare several metrics</h3>
+            <p class="lang-en">Convex hull ratio and minimum rectangle ratio supplement Polsby-Popper. If several measures are low, the geometry deserves attention; if only one measure is low, the interpretation should be cautious.</p>
+            <p class="lang-zh zh-text">凸包比例和最小矩形比例可以补充 Polsby-Popper。如果多个指标都低，几何异常更值得关注；如果只有一个指标低，就需要谨慎解释。</p>
           </article>
           <article>
-            <h3>Put math back into school context / 把数学放回学区语境</h3>
-            <p>
-              In Bellevue, the point is not to find the "ugliest" boundary. The stronger question is whether low-compactness boundaries intersect with consolidation, receiving schools, program movement, travel distance, and family burden.
-            </p>
-            <p class="zh-text">
-              对 Bellevue 来说，重点不是找“最丑”的边界，而是看低紧凑度边界是否与学校整合、接收学校、项目迁移、交通距离和家庭负担相交叉。
-            </p>
+            <h3 data-en="Put math back into school context" data-zh="把数学放回学区语境">Put math back into school context</h3>
+            <p class="lang-en">In Bellevue, the point is not to find the "ugliest" boundary. The stronger question is whether low-compactness boundaries intersect with consolidation, receiving schools, program movement, travel distance, and family burden.</p>
+            <p class="lang-zh zh-text">对 Bellevue 来说，重点不是找“最丑”的边界，而是看低紧凑度边界是否与学校整合、接收学校、项目迁移、交通距离和家庭负担相交叉。</p>
           </article>
         </div>
       </section>
 
       <section class="analysis-section two-column">
         <div>
-          <p class="eyeline">Bellevue Reading / Bellevue 解读</p>
-          <h2>A careful reading of Bellevue boundaries</h2>
-          <p>
-            Bennett and Newport Heights are strong geometry flags. Clyde Hill, Enatai, Spiritridge, and Woodridge are stronger policy-context cases because they connect mathematical metrics to school consolidation and reassignment.
-          </p>
-          <p class="zh-text">
-            Bennett 和 Newport Heights 是强几何信号。Clyde Hill、Enatai、Spiritridge 和 Woodridge 更适合作为政策语境案例，因为它们把数学指标与学校整合和重新分配连接起来。
-          </p>
+          <p class="eyeline" data-en="Bellevue Reading" data-zh="Bellevue 解读">Bellevue Reading</p>
+          <h2 data-en="A careful reading of Bellevue boundaries" data-zh="谨慎解读 Bellevue 边界">A careful reading of Bellevue boundaries</h2>
+          <p class="lang-en">Bennett and Newport Heights are strong geometry flags. Clyde Hill, Enatai, Spiritridge, and Woodridge are stronger policy-context cases because they connect mathematical metrics to school consolidation and reassignment.</p>
+          <p class="lang-zh zh-text">Bennett 和 Newport Heights 是强几何信号。Clyde Hill、Enatai、Spiritridge 和 Woodridge 更适合作为政策语境案例，因为它们把数学指标与学校整合和重新分配连接起来。</p>
         </div>
         <div>
-          <p class="eyeline">Research Question / 研究问题</p>
-          <h2>A better research question</h2>
-          <p>
-            Not: Are Bellevue school boundaries gerrymandered?
-          </p>
-          <p>
-            Better: What boundary-shape questions can mathematical metrics reveal, and where do those metrics fail when boundaries involve school closure, receiving schools, and family impacts?
-          </p>
-          <p class="zh-text">
-            不是：Bellevue 学区边界是否被 gerrymandered？更好的问题是：数学边界指标能揭示哪些形状问题？当边界牵涉学校关闭、接收学校和家庭影响时，数学在哪里失效？
-          </p>
+          <p class="eyeline" data-en="Research Question" data-zh="研究问题">Research Question</p>
+          <h2 data-en="A better research question" data-zh="一个更好的研究问题">A better research question</h2>
+          <p class="lang-en">Not: Are Bellevue school boundaries gerrymandered?</p>
+          <p class="lang-en">Better: What boundary-shape questions can mathematical metrics reveal, and where do those metrics fail when boundaries involve school closure, receiving schools, and family impacts?</p>
+          <p class="lang-zh zh-text">不是：Bellevue 学区边界是否被 gerrymandered？更好的问题是：数学边界指标能揭示哪些形状问题？当边界牵涉学校关闭、接收学校和家庭影响时，数学在哪里失效？</p>
         </div>
       </section>
 
       <section class="analysis-section">
         <div>
-          <p class="eyeline">News Context / 新闻语境</p>
-          <h2>Public discussion and criticism</h2>
-          <p>
-            News coverage does not replace data analysis, but it identifies which questions the math should help investigate.
-          </p>
-          <p class="zh-text">
-            新闻报道不能替代数据分析，但它能告诉我们应该用数学指标去追问哪些问题。
-          </p>
+          <p class="eyeline" data-en="News Context" data-zh="新闻语境">News Context</p>
+          <h2 data-en="Public discussion and criticism" data-zh="公共讨论与批评">Public discussion and criticism</h2>
+          <p class="lang-en">News coverage does not replace data analysis, but it identifies which questions the math should help investigate.</p>
+          <p class="lang-zh zh-text">新闻报道不能替代数据分析，但它能告诉我们应该用数学指标去追问哪些问题。</p>
         </div>
         <div class="critique-list">
           <article>
-            <h3>Process speed and participation / 流程速度与参与</h3>
-            <p>
-              KUOW and KOMO reported parent criticism around fast timelines, limited early engagement, confusing communication, and concerns that consolidation moved too quickly.
-            </p>
-            <p class="zh-text">
-              KUOW 和 KOMO 报道了家长对关闭时间线过快、早期参与不足、沟通混乱和推进过快的批评。
-            </p>
+            <h3 data-en="Process speed and participation" data-zh="流程速度与参与">Process speed and participation</h3>
+            <p class="lang-en">KUOW and KOMO reported parent criticism around fast timelines, limited early engagement, confusing communication, and concerns that consolidation moved too quickly.</p>
+            <p class="lang-zh zh-text">KUOW 和 KOMO 报道了家长对关闭时间线过快、早期参与不足、沟通混乱和推进过快的批评。</p>
           </article>
           <article>
-            <h3>Where students were reassigned / 学生被分到哪里</h3>
-            <p>
-              Public reporting describes Wilburton students moving toward Clyde Hill and Enatai, Eastgate students toward Spiritridge, and the Spiritridge advanced learning program toward Woodridge.
-            </p>
-            <p class="zh-text">
-              公开报道显示，Wilburton 学生转向 Clyde Hill 与 Enatai，Eastgate 学生转向 Spiritridge，Spiritridge 的高级学习项目迁往 Woodridge。
-            </p>
+            <h3 data-en="Where students were reassigned" data-zh="学生被分到哪里">Where students were reassigned</h3>
+            <p class="lang-en">Public reporting describes Wilburton students moving toward Clyde Hill and Enatai, Eastgate students toward Spiritridge, and the Spiritridge advanced learning program toward Woodridge.</p>
+            <p class="lang-zh zh-text">公开报道显示，Wilburton 学生转向 Clyde Hill 与 Enatai，Eastgate 学生转向 Spiritridge，Spiritridge 的高级学习项目迁往 Woodridge。</p>
           </article>
           <article>
-            <h3>Equity claims and district response / 公平性指控与学区回应</h3>
-            <p>
-              Northwest Asian Weekly reported criticism that closures could displace lower-income and diverse student communities, while the district emphasized budget shortfalls, enrollment decline, and the need to rightsize services.
-            </p>
-            <p class="zh-text">
-              Northwest Asian Weekly 报道了关于低收入和多元学生群体被迁出的批评；学区则强调预算短缺、入学人数下降和维持服务所需的 rightsizing。
-            </p>
+            <h3 data-en="Equity claims and district response" data-zh="公平性指控与学区回应">Equity claims and district response</h3>
+            <p class="lang-en">Northwest Asian Weekly reported criticism that closures could displace lower-income and diverse student communities, while the district emphasized budget shortfalls, enrollment decline, and the need to rightsize services.</p>
+            <p class="lang-zh zh-text">Northwest Asian Weekly 报道了关于低收入和多元学生群体被迁出的批评；学区则强调预算短缺、入学人数下降和维持服务所需的 rightsizing。</p>
           </article>
         </div>
       </section>
 
       <section class="analysis-section">
         <div>
-          <p class="eyeline">Social Justice Layer / 社会公平层</p>
-          <h2>Adding equity and justice to measurement</h2>
-          <p>
-            If the analysis stops at compactness, it remains a shape analysis. The equity layer asks who gains access, who absorbs costs, and who participates in decisions.
-          </p>
-          <p class="zh-text">
-            如果分析停留在紧凑度，它仍然只是形状分析。公平正义层要求我们追问：谁获得机会，谁承担成本，谁参与决策。
-          </p>
+          <p class="eyeline" data-en="Social Justice Layer" data-zh="社会公平层">Social Justice Layer</p>
+          <h2 data-en="Adding equity and justice to measurement" data-zh="把公平正义加入测量">Adding equity and justice to measurement</h2>
+          <p class="lang-en">If the analysis stops at compactness, it remains a shape analysis. The equity layer asks who gains access, who absorbs costs, and who participates in decisions.</p>
+          <p class="lang-zh zh-text">如果分析停留在紧凑度，它仍然只是形状分析。公平正义层要求我们追问：谁获得机会，谁承担成本，谁参与决策。</p>
         </div>
         <div class="critique-list">
           <article>
-            <h3>Burden distribution / 负担分配</h3>
-            <p>Check whether distance, travel time, transportation, and family pickup costs shifted disproportionately to some communities.</p>
-            <p class="zh-text">检查距离、通勤时间、交通方式和家庭接送成本是否被不成比例地转移到某些社区。</p>
+            <h3 data-en="Burden distribution" data-zh="负担分配">Burden distribution</h3>
+            <p class="lang-en">Check whether distance, travel time, transportation, and family pickup costs shifted disproportionately to some communities.</p>
+            <p class="lang-zh zh-text">检查距离、通勤时间、交通方式和家庭接送成本是否被不成比例地转移到某些社区。</p>
           </article>
           <article>
-            <h3>Opportunity access / 机会可达性</h3>
-            <p>Track whether advanced learning, special education, language support, and after-school care became easier or harder to access.</p>
-            <p class="zh-text">追踪高级学习、特殊教育、语言支持和课后照护等项目是否变得更容易或更难获得。</p>
+            <h3 data-en="Opportunity access" data-zh="机会可达性">Opportunity access</h3>
+            <p class="lang-en">Track whether advanced learning, special education, language support, and after-school care became easier or harder to access.</p>
+            <p class="lang-zh zh-text">追踪高级学习、特殊教育、语言支持和课后照护等项目是否变得更容易或更难获得。</p>
           </article>
           <article>
-            <h3>Structural inequality / 结构性差异</h3>
-            <p>Overlay boundary changes with income, housing cost, renter share, race, language, and transportation access.</p>
-            <p class="zh-text">将边界变化与收入、住房成本、租房比例、族裔、语言和交通可达性叠加。</p>
+            <h3 data-en="Structural inequality" data-zh="结构性差异">Structural inequality</h3>
+            <p class="lang-en">Overlay boundary changes with income, housing cost, renter share, race, language, and transportation access.</p>
+            <p class="lang-zh zh-text">将边界变化与收入、住房成本、租房比例、族裔、语言和交通可达性叠加。</p>
           </article>
           <article>
-            <h3>Procedural justice / 程序正义</h3>
-            <p>Evaluate whether families had time, information, translation, meeting access, and meaningful response channels.</p>
-            <p class="zh-text">评价家庭是否有足够时间、信息、翻译、会议渠道和真实反馈机会。</p>
+            <h3 data-en="Procedural justice" data-zh="程序正义">Procedural justice</h3>
+            <p class="lang-en">Evaluate whether families had time, information, translation, meeting access, and meaningful response channels.</p>
+            <p class="lang-zh zh-text">评价家庭是否有足够时间、信息、翻译、会议渠道和真实反馈机会。</p>
           </article>
         </div>
       </section>
 
       <section class="source-section">
-        <p class="eyeline">Sources / 来源</p>
-        <h2>News and policy materials used / 引入的新闻与政策材料</h2>
+        <p class="eyeline" data-en="Sources" data-zh="来源">Sources</p>
+        <h2 data-en="News and policy materials used" data-zh="引入的新闻与政策材料">News and policy materials used</h2>
         <ul>
           <li><a href="https://www.kuow.org/stories/bellevue-school-board-to-vote-on-school-closures" target="_blank" rel="noreferrer">KUOW: Bellevue School Board to vote on school closures</a></li>
           <li><a href="https://www.kuow.org/stories/bellevue-school-district-recommends-closing-3-schools" target="_blank" rel="noreferrer">KUOW: Bellevue recommends 3 schools to close</a></li>
@@ -217,9 +166,11 @@
       </section>
 
       <section class="analysis-footer">
-        <a class="nav-link" href="index.html">Back to Map Tool</a>
-        <p>Next step: add travel distance, school capacity, demographics, and public meeting materials to turn shape metrics into a stronger evidence chain.</p>
+        <a class="nav-link" href="index.html" data-en="Back to Map Tool" data-zh="返回地图工具">Back to Map Tool</a>
+        <p class="lang-en">Next step: add travel distance, school capacity, demographics, and public meeting materials to turn shape metrics into a stronger evidence chain.</p>
+        <p class="lang-zh zh-text">下一步：加入通勤距离、学校容量、人口结构和公共会议材料，把形状指标转化为更强的证据链。</p>
       </section>
     </main>
+    <script src="page-lang.js?v=lang-toggle-1"></script>
   </body>
 </html>
