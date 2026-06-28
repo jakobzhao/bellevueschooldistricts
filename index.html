@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>贝尔维尤学校边界工具</title>
+    <link
+      href="https://unpkg.com/maplibre-gl@5.9.0/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=equity-1" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div id="map" aria-label="贝尔维尤学校边界互动地图"></div>
+
+      <header class="topbar">
+        <a class="brand" href="#map" aria-label="贝尔维尤边界技术探索工具">
+          <span class="brand-mark"></span>
+          <span data-i18n="brand">贝尔维尤边界工具</span>
+        </a>
+        <div class="topbar-meta">
+          <a class="nav-link" href="changes.html" data-i18n="changesLink">变化</a>
+          <a class="nav-link" href="analysis.html" data-i18n="analysisLink">分析</a>
+          <div class="language-toggle" role="group" aria-label="语言切换">
+            <button class="language-button active" type="button" data-lang="zh">中文</button>
+            <button class="language-button" type="button" data-lang="en">EN</button>
+          </div>
+        </div>
+      </header>
+
+      <aside class="panel panel-left" aria-label="边界控制">
+        <section class="panel-section">
+          <div class="section-title">
+            <span data-i18n="boundaryLevel">边界尺度</span>
+            <small data-i18n="compareAreas">比较学校入学区域</small>
+          </div>
+
+          <div class="segmented" role="tablist" aria-label="学校尺度">
+            <button class="level-button active" type="button" data-level="elementary">
+              小学
+            </button>
+            <button class="level-button" type="button" data-level="middle">初中</button>
+            <button class="level-button" type="button" data-level="high">高中</button>
+          </div>
+        </section>
+
+        <section class="panel-section">
+          <div class="eyeline" data-i18n="legendTitle">紧凑度图例</div>
+          <div class="metric-key">
+            <div>
+              <span class="swatch low"></span>
+              <span data-i18n="lowCompactness">较低紧凑度</span>
+            </div>
+            <div>
+              <span class="swatch mid"></span>
+              <span data-i18n="middleRange">中间区间</span>
+            </div>
+            <div>
+              <span class="swatch high"></span>
+              <span data-i18n="highCompactness">较高紧凑度</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel-section">
+          <div class="eyeline" data-i18n="mapLayerTitle">地图图层</div>
+          <p class="panel-note" id="map-subtitle">
+            灰度矢量底图叠加贝尔维尤入学边界，颜色表示 Polsby-Popper 紧凑度。
+          </p>
+        </section>
+      </aside>
+
+      <aside class="panel panel-right" aria-label="边界指标与方法">
+        <section class="panel-section selected-boundary" aria-live="polite">
+          <div class="eyeline" data-i18n="selectedBoundary">已选边界</div>
+          <h1 id="selected-name">加载中...</h1>
+          <dl>
+            <div>
+              <dt data-i18n="polsbyPopper">Polsby-Popper</dt>
+              <dd id="selected-pp">--</dd>
+            </div>
+            <div>
+              <dt data-i18n="convexHull">凸包比例</dt>
+              <dd id="selected-hull">--</dd>
+            </div>
+            <div>
+              <dt data-i18n="area">面积</dt>
+              <dd id="selected-area">--</dd>
+            </div>
+            <div>
+              <dt data-i18n="perimeter">周长</dt>
+              <dd id="selected-perimeter">--</dd>
+            </div>
+            <div>
+              <dt data-i18n="minRect">最小矩形比例</dt>
+              <dd id="selected-rect">--</dd>
+            </div>
+            <div>
+              <dt data-i18n="ppPercentile">紧凑度分位</dt>
+              <dd id="selected-pp-percentile">--</dd>
+            </div>
+            <div>
+              <dt data-i18n="hullPercentile">凸包分位</dt>
+              <dd id="selected-hull-percentile">--</dd>
+            </div>
+          </dl>
+          <p id="selected-note">点击一个入学区域，将指标分数与本地语境连接起来。</p>
+        </section>
+
+        <section class="panel-section priority-list">
+          <div class="eyeline" data-i18n="priorityQuestions">优先问题</div>
+          <ol id="priority-list"></ol>
+        </section>
+
+        <section class="panel-section method-panel">
+          <div class="eyeline" data-i18n="methodTitle">方法</div>
+          <div class="method-steps">
+            <article>
+              <span>1</span>
+              <p data-i18n="measureText">为每个入学区域计算紧凑度、凸性和拉长度。</p>
+            </article>
+            <article>
+              <span>2</span>
+              <p data-i18n="flagText">识别几何形状异常或政策相关性较高的边界区域。</p>
+            </article>
+            <article>
+              <span>3</span>
+              <p data-i18n="interpretText">判断数学可以负责任地声称什么，以及哪些地方必须交给定性语境。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel-section equity-panel">
+          <div class="eyeline" data-i18n="equityTitle">公平检查</div>
+          <ul class="equity-list">
+            <li data-i18n="equityTravel">通勤时间是否增加？</li>
+            <li data-i18n="equityAccess">项目可达性是否改变？</li>
+            <li data-i18n="equityLanguage">多语言家庭是否受影响？</li>
+            <li data-i18n="equityHousing">住房与收入差异是否叠加？</li>
+            <li data-i18n="equityVoice">家庭是否有真实参与机会？</li>
+          </ul>
+        </section>
+      </aside>
+
+      <div class="map-caption">
+        <strong id="map-title">贝尔维尤小学入学区域</strong>
+        <span data-i18n="mapCaptionHint">点击任意边界查看指标。</span>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/maplibre-gl@5.9.0/dist/maplibre-gl.js"></script>
+    <script src="app.js?v=equity-1"></script>
+  </body>
+</html>

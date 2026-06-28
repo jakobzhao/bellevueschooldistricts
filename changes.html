@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>贝尔维尤学区边界变化</title>
+    <link rel="stylesheet" href="styles.css?v=equity-1" />
+  </head>
+  <body class="changes-page">
+    <header class="analysis-header">
+      <a class="brand" href="index.html" aria-label="返回贝尔维尤边界工具">
+        <span class="brand-mark"></span>
+        <span>贝尔维尤边界工具</span>
+      </a>
+      <div class="change-nav">
+        <a class="nav-link" href="index.html">地图工具</a>
+        <a class="nav-link" href="analysis.html">分析</a>
+      </div>
+    </header>
+
+    <main class="changes-main">
+      <section class="analysis-hero">
+        <p class="eyeline">Boundary Change</p>
+        <h1>从关闭学校到接收学校：边界变化如何发生</h1>
+        <p>
+          这一页先用公开报道和 Bellevue School District 的规划材料重建 2023 年小学整合前后的变化关系。
+          目前公开数据中最容易取得的是整合后的 current attendance areas；旧版 Wilburton 与 Eastgate 的精确
+          polygon 还需要历史 GIS 或旧地图矢量化。这里先呈现“前后关系”和“学生/项目流向”。
+        </p>
+      </section>
+
+      <section class="change-board">
+        <article class="change-column before">
+          <p class="eyeline">Before</p>
+          <h2>整合前</h2>
+          <div class="school-stack">
+            <div class="school-card closed">
+              <strong>Wilburton Elementary</strong>
+              <span>独立小学社区</span>
+            </div>
+            <div class="school-card closed">
+              <strong>Eastgate Elementary</strong>
+              <span>独立小学社区</span>
+            </div>
+            <div class="school-card program">
+              <strong>Spiritridge AL Program</strong>
+              <span>高级学习项目所在学校</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="flow-column">
+          <p class="eyeline">Reported Reassignment</p>
+          <h2>公开报道中的流向</h2>
+          <div class="flow-list">
+            <div class="flow-row">
+              <span>Wilburton</span>
+              <b>→</b>
+              <span>Clyde Hill + Enatai</span>
+            </div>
+            <div class="flow-row">
+              <span>Eastgate</span>
+              <b>→</b>
+              <span>Spiritridge</span>
+            </div>
+            <div class="flow-row">
+              <span>Spiritridge AL</span>
+              <b>→</b>
+              <span>Woodridge</span>
+            </div>
+          </div>
+          <p class="change-note">
+            这不是几何边界本身，而是政策变化产生的学生与项目迁移关系。它告诉我们哪些 current boundaries
+            应该在地图工具中重点检查。
+          </p>
+        </article>
+
+        <article class="change-column after">
+          <p class="eyeline">After</p>
+          <h2>整合后</h2>
+          <div class="school-stack">
+            <div class="school-card receiver">
+              <strong>Clyde Hill</strong>
+              <span>接收 Wilburton 部分学生</span>
+            </div>
+            <div class="school-card receiver">
+              <strong>Enatai</strong>
+              <span>接收 Wilburton 部分学生</span>
+            </div>
+            <div class="school-card receiver">
+              <strong>Spiritridge</strong>
+              <span>接收 Eastgate 学生</span>
+            </div>
+            <div class="school-card receiver">
+              <strong>Woodridge</strong>
+              <span>接收 advanced learning 项目</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="analysis-section">
+        <div>
+          <p class="eyeline">What To Compare</p>
+          <h2>变化页应该和地图页一起读</h2>
+        </div>
+        <div class="critique-list">
+          <article>
+            <h3>第一层：几何变化</h3>
+            <p>
+              如果能取得旧版 attendance boundaries，下一步可以把旧 Wilburton/Eastgate 区域和当前 Clyde Hill、
+              Enatai、Spiritridge、Woodridge 区域叠加，计算边界前后面积、周长、紧凑度和凸包比例的变化。
+            </p>
+          </article>
+          <article>
+            <h3>第二层：学生流向</h3>
+            <p>
+              即使没有旧 polygon，也可以先把公开报道中的 reassignment flow 作为分析对象：哪些学校关闭，
+              哪些学校接收，哪些项目迁移，哪些家庭需要适应新的学校路径。
+            </p>
+          </article>
+          <article>
+            <h3>第三层：公平性质疑</h3>
+            <p>
+              真正关键的问题不是边界是否变得更紧凑，而是变化是否改变了通勤距离、项目可达性、同伴网络、
+              多语言支持和不同收入家庭的负担。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="source-section equity-matrix">
+        <p class="eyeline">Equity Lens</p>
+        <h2>变化影响矩阵</h2>
+        <div class="equity-grid">
+          <article>
+            <h3>通勤负担</h3>
+            <p>学生从旧学校转到接收学校后，距离、时间和交通安排是否变得更困难？</p>
+          </article>
+          <article>
+            <h3>项目可达性</h3>
+            <p>advanced learning、special education、after-school care 等项目迁移后，哪些学生更难进入？</p>
+          </article>
+          <article>
+            <h3>社区连续性</h3>
+            <p>学生是否被拆离原来的同伴网络、老师关系和社区学校身份？</p>
+          </article>
+          <article>
+            <h3>收入与住房</h3>
+            <p>租房家庭、低收入家庭或房价较低区域是否更容易承担边界变化成本？</p>
+          </article>
+          <article>
+            <h3>语言与家庭参与</h3>
+            <p>多语言家庭是否获得足够通知、翻译、会议时间和表达渠道？</p>
+          </article>
+          <article>
+            <h3>资源是否跟随学生</h3>
+            <p>接收学校是否获得足够教师、教室、辅导、交通和特殊服务资源？</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="source-section">
+        <p class="eyeline">Evidence Status</p>
+        <h2>数据状态与下一步</h2>
+        <ul>
+          <li>Current attendance areas: 已经从 City of Bellevue Open Data 下载并用于地图工具。</li>
+          <li>Historical Wilburton/Eastgate polygons: 尚未找到公开可下载 GIS，需要从旧 PDF、学区档案或 Wayback/ArcGIS 历史服务继续找。</li>
+          <li>Reported reassignment: 已由 KUOW、KIRO、FOX 13、NW Asian Weekly 和 BSD Board Report 支撑。</li>
+          <li>下一步：若找到旧边界图，可做真正的 before/after overlay 和 change metrics。</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
